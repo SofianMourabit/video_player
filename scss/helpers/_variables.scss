@@ -1,0 +1,37 @@
+
+// Descriptive color variables
+
+$white          : #fff;
+$black          : #111;
+$grey           : #edeff0;
+$scooter        : #39add1;
+$muddy-waters   : #BA8058;
+
+// Functional color variables
+
+$color-prim : $scooter;
+$color-sec : $muddy-waters;
+
+$color-link-default : $scooter;
+$color-link-visited : $black;
+
+$color-body         : $black;
+
+$body-bg            : $grey;
+$container-bg       : $white;
+
+
+// Font stacks
+
+$stack-sans-serif : Helvetica, Arial, sans-serif;
+$stack-source: 'Source Sans Pro', $stack-sans-serif;
+$stack-miriam : 'Miriam Libre', $stack-sans-serif;
+
+// Assets path
+
+$path-image : '../svgs';
+
+// media query breakpoints
+$brk-mobile : 'min-width: 425px';
+$brk-narrow : 'min-width: 768px';
+$brk-wide : 'min-width: 1024px';

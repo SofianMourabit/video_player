@@ -1,0 +1,26 @@
+{
+  "name": "video_player",
+  "version": "1.0.0",
+  "description": "Project-07 Front End Developer Track: Javascript Video Player",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofianMourabit/video_player.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofianMourabit/video_player/issues"
+  },
+  "homepage": "https://github.com/SofianMourabit/video_player#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-watch": "^4.3.11"
+  }
+}
