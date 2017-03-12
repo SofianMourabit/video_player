@@ -433,6 +433,14 @@ span {
     width: 60%;
     margin: auto; } }
 
+.mejs__inner .mejs__controls {
+  background: rgba(52, 73, 94, 0.5); }
+
+.mejs__container {
+  border: 3px solid #34495e;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+
 .container {
   width: 90%;
   margin: auto; }

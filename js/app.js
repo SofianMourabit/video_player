@@ -20,8 +20,9 @@ let captionTime = [
   [49.270, 53.760],
   [53.760, 57.780],
   [57.780, 60.150],
-  [0, 0]
+  [61, 62]
 ];
+
 
 captionWrapper.addEventListener('click', (event) => {
   let number = event.target.className;
@@ -33,8 +34,10 @@ video.addEventListener('playing', () => {
     let caption = document.getElementsByClassName(''+i+'')[0];
     if (video.getCurrentTime() > captionTime[i][0] &&  video.getCurrentTime() < captionTime[i][1]){
       caption.style.color = '#42b983';
+      caption.style.fontWeight = 'bold';
     }else {
       caption.style.color = 'black';
+      caption.style.fontWeight = 'normal';
       i++;
     }
   });
