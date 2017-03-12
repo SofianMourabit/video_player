@@ -418,7 +418,6 @@ h1, h2 {
   font-family: "Miriam Libre", Helvetica, Arial, sans-serif; }
 
 p {
-  max-width: 386px;
   margin: 35px auto 0;
   line-height: 2em;
   text-align: left; }
@@ -427,15 +426,15 @@ p {
       max-width: 725px; } }
 
 @media (min-width: 768px) {
-  header video {
-    width: 725px;
-    height: auto; } }
+  header {
+    width: 60%;
+    margin: auto; } }
 
 .container {
   width: 90%;
   margin: auto; }
   @media (min-width: 768px) {
     .container {
-      width: 70%; } }
+      width: 60%; } }
 
 /*# sourceMappingURL=main.css.map */

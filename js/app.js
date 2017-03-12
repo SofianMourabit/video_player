@@ -1,14 +1,10 @@
 var player = new MediaElement('player', {
-       pluginPath: "js/vendor/build/mediaelement/",
-       success: function (mediaElement) {
-        setTimeout(function () {
-            mediaElement.play();
-        }, 400);
-        mediaElement.addEventListener('playing', function () {
-            mediaElement.pause();
-            mediaElement.setCurrentTime(3);
-            console.log("Current time = " + mediaElement.currentTime);
-        }, false);
-    }
-   });
+  pluginPath: "https://cdnjs.com/libraries/mediaelement/",
+  shimScriptAccess: 'always',
+  success: function(mediaElement, originalNode) {
+    // do things
+  }
+});
+
+player.setCurrentTime(4);
 console.log('We are live');
