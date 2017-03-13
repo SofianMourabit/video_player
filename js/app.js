@@ -20,19 +20,20 @@ const captionTime = [
   [53.760, 57.780],
   [57.780, 61]
 ];
-function highlightCaption(span){
-  span.style.color = '#42b983';
-  span.style.fontWeight = 'bold';
-}
-function resetCaption(span){
-  span.style.color = '#34495e';
-  span.style.fontWeight = 'normal';
+function highlightCaption(span, hightlight = 'yes'){
+  if (hightlight == 'yes'){
+    span.style.color = '#42b983';
+    span.style.fontWeight = 'bold';
+  }else if(hightlight == 'reset') {
+    span.style.color = '#34495e';
+    span.style.fontWeight = 'normal';
+  }
 }
 // Click on caption text to nagivate video
 captionWrapper.addEventListener('click', (event) => {
   // Clear Highlight
   for(let j = 0, l = spans.length; j < l; j++){
-    resetCaption(spans[j]);
+    highlightCaption(spans[j], 'reset');
   }
   // Jump video to the caption's start time
   let startTime = event.target.className;
@@ -43,10 +44,15 @@ captionWrapper.addEventListener('click', (event) => {
 // Highlight captions
 video.addEventListener('timeupdate', () => {
   let caption = document.getElementsByClassName(i)[0];
-  if (video.getCurrentTime() > captionTime[i][0] &&  video.getCurrentTime() < captionTime[i][1]){
+  console.log(video.getCurrentTime());
+  console.log(captionTime[i][0]);
+  console.log(captionTime[i][1]);
+  if (video.getCurrentTime() >= captionTime[i][0] &&  video.getCurrentTime() < captionTime[i][1]){
     highlightCaption(caption);
+    console.log('Value evaluated to true');
   }else if (!video.paused){
-    resetCaption(caption);
+    highlightCaption(caption, 'reset');
     i++;
+    console.log('New value of i: ' + i);
   }
 });
