@@ -1,8 +1,8 @@
 $('video').mediaelementplayer();
 let i = 0;
-let videoWrapper = document.querySelector('.video');
-let captionWrapper = document.querySelector('.container');
-let captionTime = [
+const videoWrapper = document.querySelector('.video');
+const captionWrapper = document.querySelector('.container');
+const captionTime = [
   [0, 4.130],
   [4.130, 7.535],
   [7.535, 11.270],
@@ -32,7 +32,7 @@ function resetCaption(span){
 // Click on caption text to nagivate video
 captionWrapper.addEventListener('click', (event) => {
   // Clear Highlight
-  let spans = document.querySelectorAll('main span');
+  const spans = document.querySelectorAll('main span');
   for(let j = 0, l = spans.length; j < l; j++){
     resetCaption(spans[j]);
   }
@@ -43,14 +43,12 @@ captionWrapper.addEventListener('click', (event) => {
   i = startTime;
 });
 // Highlight captions
-video.addEventListener('playing', () => {
-  video.addEventListener('timeupdate', () => {
-    let caption = document.getElementsByClassName(i)[0];
-    if (video.getCurrentTime() > captionTime[i][0] &&  video.getCurrentTime() < captionTime[i][1]){
-      highlightCaption(caption);
-    }else if (!video.paused){
-      resetCaption(caption);
-      i++;
-    }
-  });
+video.addEventListener('timeupdate', () => {
+  let caption = document.getElementsByClassName(i)[0];
+  if (video.getCurrentTime() > captionTime[i][0] &&  video.getCurrentTime() < captionTime[i][1]){
+    highlightCaption(caption);
+  }else if (!video.paused){
+    resetCaption(caption);
+    i++;
+  }
 });
