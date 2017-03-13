@@ -1,7 +1,7 @@
 $('video').mediaelementplayer();
 let i = 0;
-const videoWrapper = document.querySelector('.video');
 const captionWrapper = document.querySelector('.container');
+const spans = document.querySelectorAll('main span');
 const captionTime = [
   [0, 4.130],
   [4.130, 7.535],
@@ -20,7 +20,6 @@ const captionTime = [
   [53.760, 57.780],
   [57.780, 61]
 ];
-
 function highlightCaption(span){
   span.style.color = '#42b983';
   span.style.fontWeight = 'bold';
@@ -32,7 +31,6 @@ function resetCaption(span){
 // Click on caption text to nagivate video
 captionWrapper.addEventListener('click', (event) => {
   // Clear Highlight
-  const spans = document.querySelectorAll('main span');
   for(let j = 0, l = spans.length; j < l; j++){
     resetCaption(spans[j]);
   }
