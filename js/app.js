@@ -44,15 +44,10 @@ captionWrapper.addEventListener('click', (event) => {
 // Highlight captions
 video.addEventListener('timeupdate', () => {
   let caption = document.getElementsByClassName(i)[0];
-  console.log(video.getCurrentTime());
-  console.log(captionTime[i][0]);
-  console.log(captionTime[i][1]);
   if (video.getCurrentTime() >= captionTime[i][0] &&  video.getCurrentTime() < captionTime[i][1]){
     highlightCaption(caption);
-    console.log('Value evaluated to true');
   }else if (!video.paused){
     highlightCaption(caption, 'reset');
     i++;
-    console.log('New value of i: ' + i);
   }
 });
