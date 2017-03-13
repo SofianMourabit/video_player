@@ -32,7 +32,7 @@ function highlightCaption(span, hightlight = 'yes'){
 // Click on caption text to nagivate video
 captionWrapper.addEventListener('click', (event) => {
   // Clear Highlight
-  for(let j = 0, l = spans.length; j < l; j++){
+  for(let j = 0; j < spans.length; j++){
     highlightCaption(spans[j], 'reset');
   }
   // Jump video to the caption's start time
