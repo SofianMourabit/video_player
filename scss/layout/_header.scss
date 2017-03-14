@@ -1,14 +1,27 @@
 header {
   @media ($brk-narrow){
     width: 60%;
-    margin: auto;
+    margin: 10px auto;
   }
 }
 .mejs__inner .mejs__controls {
-  background: rgba(52,73,94,0.5);
+  background: rgba(52,73,94,1);
 }
-.mejs__container{
-  border: 3px solid #34495e;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+.mejs__time-current {
+    background: rgba(66, 185, 131, 0.9);
+}
+.mejs__controls {
+    margin: 0;
+    padding: 5px 10px;
+    bottom: -40px;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 2px;
+}
+.mejs__container {
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+    border-top: 1px solid #34495e;
 }

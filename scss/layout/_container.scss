@@ -1,14 +1,20 @@
 .container {
+  background-color: $white;
   width: 90%;
   margin: auto;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+  padding: 1em;
+  box-sizing: border-box;
   @media ($brk-narrow){
     width: 60%;
   }
+  &:hover{
+    box-shadow: 0 4px 0 #42b983;
+  }
 }
 .highlight {
-    color: #42b983;
-    font-size: 1.5em;
-    font-weight: 400;
-    margin: 0;
-    padding: 0.5em 0;
+  color: #42b983;
+  font-size: 1.1em;
+  font-weight: 700;
 }

@@ -1,4 +1,5 @@
 body {
+  background: #edeff0;
   margin: 0;
   padding: 0;
   @extend %centered;
@@ -7,9 +8,14 @@ body {
 h1, h2{
   font-family: $stack-miriam;
 }
+h3{
+  color: #576366;
+  font-family: $stack-miriam;
+  text-align: left;
+  font-weight: bold;
+}
 p {
   margin: 35px auto 0;
-  line-height: 2em;
   text-align: left;
   @media ($brk-narrow){
     max-width: 725px;

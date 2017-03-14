@@ -1,0 +1,13 @@
+footer p {
+  padding: 2em;
+  text-align: center;
+}
+@media (min-width: 768px){
+  footer {
+    width: 50%;
+  }
+}
+footer {
+  width: 90%;
+  margin: auto;
+}
