@@ -16,10 +16,8 @@ video.addEventListener('timeupdate', () => {
     let time = video.currentTime;
     let captionStart = captions[i].getAttribute('data-start');
     let captionEnd = captions[i].getAttribute('data-end');
-    console.log(time + ' ' + captionStart);
     if (time >= captionStart &&  time <= captionEnd){
       captions[i].className = 'highlight';
-      console.log('yes Im getting here');
     }else{
       captions[i].className = '';
     }
